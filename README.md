@@ -5,17 +5,17 @@ Installs Docker-Engine on CentOS.
 
 Requirements
 ------------
+None
 
 Role Variables
 --------------
-
-Available variables are listed below, along with default values:
-
     docker_version: 1.12.0
     docker_users: []
+    docker_options: 
 
 Dependencies
 ------------
+None
 
 Example Playbook
 ----------------

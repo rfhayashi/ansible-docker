@@ -8,3 +8,10 @@
 - name: add user {{ item }} to docker group
   user: name={{ item }} groups=docker append=yes
   with_items: '{{ docker_users }}'
+- name: create docker.service.d dir
+  file: path=/etc/systemd/system/docker.service.d state=directory
+- name: create docker.service.d/docker.conf file
+  template: src=docker.conf.j2 dest=/etc/systemd/system/docker.service.d/docker.conf
+  notify:
+    - update systemd
+    - restart docker

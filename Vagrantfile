@@ -22,7 +22,8 @@ Vagrant.configure('2') do |config|
     a.playbook = 'vagrant.yml'
     a.verbose = 'vv'
     a.extra_vars = {
-        docker_users: ['vagrant']
+        docker_users: ['vagrant'],
+        docker_options: '--registry-mirror=http://192.168.50.1:5000 --insecure-registry=192.168.50.1:5000'
     }
   end
 end
