@@ -1,0 +1,14 @@
+galaxy_info:
+  author: Rui Fernando Hayashi
+  description: Installs docker-engine
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+  - name: EL
+    versions:
+      - 7
+  galaxy_tags:
+    - docker
+    - centos
+
+dependencies: []
