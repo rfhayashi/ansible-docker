@@ -4,4 +4,4 @@
   roles:
     - ansible-docker
   tasks:
-    include: test_tasks.yml
+    - include: test_tasks.yml
