@@ -1,1 +1,7 @@
 ---
+- name: adds yum docker repository
+  yum_repository: name=docker description='Docker Repository' baseurl=https://yum.dockerproject.org/repo/main/centos/7/ gpgkey=https://yum.dockerproject.org/gpg
+- name: installs yum docker-engine package
+  yum: name=docker-engine-{{ docker_version }} update_cache=yes
+- name: enables and starts docker service
+  service: name=docker enabled=yes state=started
