@@ -21,5 +21,8 @@ Vagrant.configure('2') do |config|
     a.sudo = true
     a.playbook = 'vagrant.yml'
     a.verbose = 'vv'
+    a.extra_vars = {
+        docker_users: ['vagrant']
+    }
   end
 end
